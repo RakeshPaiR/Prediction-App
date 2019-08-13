@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Blinker:400,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Spectral+SC:400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:400,500,700,800&display=swap');
+.bodyClass {
+  font-family: 'Blinker', sans-serif;
+  background: rgba(46, 204, 113,0.2);
+}
+.footerFont {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fontWeight400 {
+  font-weight: 400;
+}
+.fontWeight500 {
+  font-weight: 500;
+}
+.fontWeight600 {
+  font-weight: 600;
+}
+.fontWeight700 {
+  font-weight: 700;
+}
+.fontWeight800 {
+  font-weight: 800;
+}
+
+.fontSize8 {
+  font-size: 8px;
+}
+.fontSize9 {
+  font-size: 9px;
+}
+.fontSize10 {
+  font-size: 10px;
+}
+.fontSize12 {
+  font-size: 12px;
+}
+.fontSize14 {
+  font-size: 14px;
+}
+.fontSize15 {
+  font-size: 15px;
+}
+.fontSize16 {
+  font-size: 16px;
+}
+.fontSize18 {
+  font-size: 18px;
+}
+.fontSize20 {
+  font-size: 20px;
+}
+.fontSize25 {
+  font-size: 25px;
+}
+.fontSize80 {
+  font-size: 80px;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+.handCursor {
+  cursor: pointer;
+}
+.specialFont {
+  font-family: 'Arima Madurai', cursive;
+}

@@ -1,0 +1,89 @@
+<main class="p-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <img src="/assets/Images/footballer.png" class="footballerImage">
+      </div>
+      <div class="col-6">
+        <div class="jumbotron my-2">
+          <h3 class="display-6 specialFont">Sit Lazy</h3>
+          <h2 class="display-5 specialFont">Play Hard</h2>
+          <h1 class="display-4 text-uppercase specialFont">Earn Big!!!</h1>
+          <p class="lead">Simple game, easy to play. Just sit, relax and predict results of any future game. It can change your fate.</p>
+          <hr class="my-4">
+          <div *ngIf="!isLoggedIn">
+            <p>Over 100+ matches available to predict. Win prize for every match.</p><p> Just Login/Signup</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Sign Up</a>
+          </div>
+          <div *ngIf="isLoggedIn">
+            <p>Goto Cricket or Football tab to predict.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <img src="/assets/Images/cricketer.png" class="cricketerImage">
+      </div>
+    </div>
+  </div>
+  <hr class="todayMatchSectionHR">
+  <div class="container my-2">
+    <div class="row">
+      <p class="mx-auto fontWeight800 fontSize25">Today's Matches</p>
+    </div>
+    <div class="row">
+      <p class="mx-auto fontSize15">Matches that starts within 24hrs.</p>
+    </div>
+    <div class="row mx-0">
+      <div class="container relative">
+        <owl-carousel #todayMatchCarousel
+          [options]="{items: 3, dots: true, nav: false}"
+          [items]="todaysMatches"
+          [carouselClasses]="['owl-theme', 'row', 'sliding']">
+          <div class="owl-stage-outer mx-4">
+            <div class="owl-stage card-deck">
+                <div class="owl-item" *ngFor="let match of todaysMatches; let i = index;" [ngClass]="{'active': i<3}">
+                  <div class="item col-12">
+                    <div class="card matchCard mx-2 text-white bg-warning">
+                      <div class="card-header mx-2 mt-2 row px-0">
+                        <div class="leagueName col-9 mr-auto fontSize20 pr-0">{{match.league}}</div>
+                        <div class="col-3 ml-auto pl-0" *ngIf="match.sport === 'cricket'"><img src="assets/Images/cricketLogoNew.png" alt="Cricket" class="sportType ml-auto"></div>
+                        <div class="col-3 ml-auto pl-0" *ngIf="match.sport === 'football'"><img src="assets/Images/soccerLogoNew.png" alt="Football" class="sportType ml-auto"></div>
+                      </div>
+                      <hr>
+                      <div class="card-body pl-2 middleCardBody">
+                        <div class="row mb-1">
+                          <img src="{{match.homeLogo}}" alt="" class="teamLogo col-3 p-0 mx-3">
+                          <span class="teamName col-9 pl-0 fontSize20">{{match.home}}</span>
+                        </div>
+                        <div class="row">
+                          <img src="{{match.awayLogo}}" alt="" class="teamLogo col-3 p-0 mx-3">
+                          <span class="teamName col-9 pl-0 fontSize20">{{match.away}}</span>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="card-body pr-0 endCardBody">
+                        <div class="row pl-2">
+                          <div class="date mr-auto ml-2"><i class="far fa-calendar-alt"></i>&ensp;{{match.date}} </div>
+                          <div class="time ml-auto mr-4"><i class="fas fa-history"></i>&ensp;{{ match.time }}</div>
+                        </div>
+                        <div class="row">
+                          <div class="stadium row w-100">
+                            <img src="assets/Images/stadium.png" alt="" class="stadiumLogo col-3 pl-4">
+                            <div class="stadiumName fontSize15 col-9 pl-0">{{match.stadium}}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </owl-carousel>
+        <div class="col-xs-12 text-md-right lead">
+            <a class="btn btn-outline-secondary prev mr-auto" (click)="onPrev()" title="go back"><i class="fa fa-lg fa-chevron-left"></i></a>
+            <a class="btn btn-outline-secondary next ml-auto" (click)="onNext()" title="more"><i class="fa fa-lg fa-chevron-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,99 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/Images/prediction.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Predict
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+            <img src="/assets/Images/cricket.png" width="20" height="20" class="d-inline-block align-top">
+          Cricket
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <img src="/assets/Images/soccer.png" width="20" height="20" class="d-inline-block align-top">
+          Football
+        </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav mr-4 ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <button type="button" class="btn btn-outline-primary mr-3">Sign Up</button>
+      </li>
+      <li class="nav-item">
+        <button type="button" class="btn btn-outline-info">Login</button>
+      </li>
+    </ul>
+    <ul class="navbar-nav mr-2 ml-auto" *ngIf="isLoggedIn">
+      <!-- <li class="nav-item">
+        <span class="fontSize20 mr-4">Hi,&nbsp;<span class="fontWeight800">{{userName}}</span></span>
+      </li> -->
+      <li class="nav-item mr-4">
+        <div class="row fontSize12">
+          Level:&nbsp;<span class="fontWeight600">{{userLevel}}</span>
+        </div>
+        <div class="row">
+            <div class="progress progressSize">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger fontSize10" role="progressbar" [ngStyle]="{'width': curPercent + '%'}" attr.aria-valuenow="{{curPts}}" attr.aria-valuemin="{{minPts}}" attr.aria-valuemax="{{maxPts}}">
+
+                </div>
+                <div class="progress-bar-title fontSize9">{{curPts}}&nbsp;pts</div>
+            </div>
+        </div>
+        <div class="row fontSize9">
+          <span class="mr-auto">{{minPts}}</span>
+          <span class="ml-auto">{{maxPts}}</span>
+        </div>
+      </li>
+      <li class="nav-item mr-2 handCursor">
+        <div ngbDropdown class="container dropdown show d-inline-block">
+            <a ngbDropdownToggle class="dropdown-toggle" id="UserDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="{{userImageSrc}}" width="30" height="30" class="userImage">
+                <span class="fontSize20 fontWeight600 d-inline-block">&nbsp;&nbsp;{{userFirstName}}</span>
+                <span class="sr-only"></span>
+            </a>
+            <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right" aria-labelledby="UserDropDown">
+              <div class="container">
+                <div class="row">
+                  <div class="col-4">
+                    <img src="{{userImageSrc}}" width="50" height="50" class="userImage">
+                  </div>
+                  <div class="col-8">
+                      <span class=" fontSize16 fontWeight800 userName">{{userFullName}}</span>
+                  </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class=row>
+                  <span class="ml-3">Rank (Total): </span>
+                  <span class="ml-auto mr-3">{{rank}} ({{totalParticipants}})</span>
+                </div>
+                <div class=row>
+                  <span class="ml-3">Best Rank: </span>
+                  <span class="ml-auto mr-3">{{bestRank}}</span>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="row ml-1">
+                  <a href="#">View Profile</a>
+                </div>
+                <div class="row ml-1">
+                  <a href="#">View Standings</a>
+                </div>
+                <div class="row ml-1">
+                  <a href="#">Logout</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
