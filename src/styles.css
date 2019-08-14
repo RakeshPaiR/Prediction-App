@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Blinker:400,600,700,800,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Spectral+SC:400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,500,600,700,800&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:400,500,700,800&display=swap');
 .bodyClass {
   font-family: 'Blinker', sans-serif;
@@ -69,4 +69,7 @@ a:hover {
 }
 .specialFont {
   font-family: 'Arima Madurai', cursive;
+}
+.exo2Font {
+  font-family: 'Exo 2', sans-serif;
 }

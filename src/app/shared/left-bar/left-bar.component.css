@@ -1,0 +1,12 @@
+.leftBarBG {
+  background-color: #edeef0;
+}
+.winnerText {
+  color: #28a745 !important;
+}
+.loserText {
+  color: #dc3545 !important;
+}
+.drawText {
+  color: #ffc107 !important;
+}

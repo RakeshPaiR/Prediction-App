@@ -1,0 +1,25 @@
+<div class="exo2Font container leftBarBG p-0 w-100">
+  <div class="row fontSize18 fontWeight600 m-0">
+    <span class="mx-auto mt-1 mb-2">Past Matches</span>
+  </div>
+  <div class="row w-100 m-0" *ngFor="let match of filterMatches(sportsType)">
+    <div class="card m-2 w-100 bg-dark text-white">
+      <div class="card-header">
+        {{match.league}}
+      </div>
+      <div class="card-body">
+        <div class="row" [ngClass]="(match.winner == 'home') ? 'winnerText' : (match.winner == 'draw') ? 'drawText' : 'loserText'">
+          <div class="col-8 p-0">{{match.home}}</div>
+          <div class="col-4 text-right">{{match.homeScore}}</div>
+        </div>
+        <div class="row" [ngClass]="(match.winner == 'away') ? 'winnerText' : (match.winner == 'draw') ? 'drawText' : 'loserText'">
+          <div class="col-8 p-0">{{match.away}}</div>
+          <div class="col-4 text-right">{{match.awayScore}}</div>
+        </div>
+      </div>
+      <div class="card-footer">
+        {{match.winMethod}}
+      </div>
+    </div>
+  </div>
+</div>
