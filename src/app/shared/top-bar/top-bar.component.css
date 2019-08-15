@@ -30,5 +30,14 @@
   position: absolute;
   vertical-align: center;
   top: 12px;
-
+}
+.topBar {
+  width: 100vw;
+  overflow-x: visible;
+}
+.linkClass {
+  color: #007bff !important;
+}
+.predictionLogo {
+  width: 6rem;
 }

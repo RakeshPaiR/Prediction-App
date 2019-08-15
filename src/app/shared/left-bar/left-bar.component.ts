@@ -8,8 +8,23 @@ import { Component, OnInit, Input } from '@angular/core';
 export class LeftBarComponent implements OnInit {
 
   @Input() sportsType: string;
+  @Input() pastMatches: Array<{
+    sport: string,
+    league: string,
+    home: string,
+    away: string,
+    homeScore: string,
+    awayScore: string,
+    isTieBreaker: boolean,
+    homeTieScore: string,
+    awayTieScore: string,
+    winMethod: string,
+    winner: string,
+    dateString: string
+    date: Date
+  }>;
 
-  pastMatches = [
+  /* pastMatches = [
     {
       sport: 'football',
       league: 'Premier League',
@@ -148,10 +163,20 @@ export class LeftBarComponent implements OnInit {
       awayTieScore: '',
       winMethod: 'NZ beat PAK by 6 wickets (17.5 overs left)',
       winner: 'away',
-      date: '13/08/2019'
+      dateOld: '13/08/2019',
+      date: new Date()
     },
   ];
+ */
+
   filterMatches(sportsType) {
+    this.pastMatches = this.pastMatches.map(e => {
+      e.date = new Date(e.dateString);
+      return e;
+    });
+    this.pastMatches.sort((a, b) => {
+      return new Date(a.date).getTime() - new Date(b.date).getTime();
+    });
     return this.pastMatches.filter(x => x.sport === sportsType);
   }
 

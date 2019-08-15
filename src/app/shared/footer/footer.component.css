@@ -1,0 +1,21 @@
+.footerImage {
+  background-image: url('/assets/Images/footer-waves.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25rem;
+  width: 100%;
+  position: relative;
+}
+.footerContainer {
+  max-width: 100%;
+  position: absolute;
+  height: 100%;
+  padding-top: 7.6rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.footerRow {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}

@@ -2,11 +2,15 @@
   background-color: #edeef0;
 }
 .winnerText {
-  color: #28a745 !important;
+  color: #83f52c  !important;
 }
 .loserText {
-  color: #dc3545 !important;
+color: #FF796F !important;
 }
 .drawText {
   color: #ffc107 !important;
+}
+.cardsSection {
+  height: 84.7vh;
+  overflow-y: scroll;
 }

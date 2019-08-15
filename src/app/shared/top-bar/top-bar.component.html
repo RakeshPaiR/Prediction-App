@@ -1,30 +1,22 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand fontSize25" href="#">
-    <img src="/assets/Images/prediction.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    Predict
+<nav class="navbar navbar-expand-lg navbar-light bg-light topBar">
+  <a class="navbar-brand mr-5" [routerLink]="['/']">
+    <img src="/assets/Images/predictLogo.png" class="d-inline-block align-top predictionLogo mr-2" alt="">
+    <span class="fontSize32 freckleFont">PREDICT</span>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto fontSize18 navIcons">
-      <li class="nav-item active mr-3">
-        <a class="nav-link" [routerLink]="['/']">
-          <img src="/assets/Images/house.png" width="20" height="20" class="d-inline-block align-top mr-3">
-          <span class="navItemName">Home</span>
-          <span class="sr-only">(current)</span>
-        </a>
-      </li>
+    <ul class="navbar-nav mr-auto fontSize20 navIcons">
       <li class="nav-item mr-3">
         <a class="nav-link" [routerLink]="['/cricket']">
-          <img src="/assets/Images/cricket.png" width="20" height="20" class="d-inline-block align-top mr-2">
+          <img src="/assets/Images/cricket.png" width="30" height="30" class="d-inline-block align-top mr-2">
           <span class="navItemName">Cricket</span>
         </a>
       </li>
       <li class="nav-item mr-3">
         <a class="nav-link" [routerLink]="['/football']">
-          <img src="/assets/Images/soccer.png" width="20" height="20" class="d-inline-block align-top mr-2">
+          <img src="/assets/Images/soccer.png" width="30" height="30" class="d-inline-block align-top mr-2">
           <span class="navItemName">Football</span>
         </a>
       </li>
@@ -59,13 +51,13 @@
         </div>
       </li>
       <li class="nav-item mr-2 handCursor">
-        <div ngbDropdown class="container dropdown show d-inline-block">
+        <div ngbDropdown class="container dropdown show d-inline-block" placement="bottom-left">
             <a ngbDropdownToggle class="dropdown-toggle" id="UserDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src="{{userImageSrc}}" width="30" height="30" class="userImage">
                 <span class="fontSize20 fontWeight600 d-inline-block">&nbsp;&nbsp;{{userFirstName}}</span>
                 <span class="sr-only"></span>
             </a>
-            <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right" aria-labelledby="UserDropDown">
+            <div ngbDropdownMenu class="dropdown-menu dropdown-menu-left" aria-labelledby="UserDropDown">
               <div class="container">
                 <div class="row">
                   <div class="col-4">
@@ -86,13 +78,13 @@
                 </div>
                 <div class="dropdown-divider"></div>
                 <div class="row ml-1">
-                  <a href="#">View Profile</a>
+                  <a class="linkClass">View Profile</a>
                 </div>
                 <div class="row ml-1">
-                  <a href="#">View Standings</a>
+                  <a class="linkClass">View Standings</a>
                 </div>
                 <div class="row ml-1">
-                  <a href="#">Logout</a>
+                  <a class="linkClass" (click)="onLogout()">Logout</a>
                 </div>
               </div>
             </div>

@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Exo+2:400,500,600,700,800&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:400,500,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Freckle+Face&display=swap');
 .bodyClass {
   font-family: 'Blinker', sans-serif;
   background: rgba(46, 204, 113,0.2);
@@ -57,6 +58,9 @@
 .fontSize25 {
   font-size: 25px;
 }
+.fontSize32 {
+  font-size: 32px;
+}
 .fontSize80 {
   font-size: 80px;
 }
@@ -72,4 +76,7 @@ a:hover {
 }
 .exo2Font {
   font-family: 'Exo 2', sans-serif;
+}
+.freckleFont {
+  font-family: 'Freckle Face', cursive;
 }

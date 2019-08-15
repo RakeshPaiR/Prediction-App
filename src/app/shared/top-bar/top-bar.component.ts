@@ -23,6 +23,10 @@ export class TopBarComponent implements OnInit {
   totalParticipants = 1234;
   curPercent = (this.curPts - this.minPts) * 100 / (this.maxPts - this.minPts);
 
+  onLogout() {
+    this.isLoggedIn = false;
+  }
+
   ngOnInit() {
   }
 
