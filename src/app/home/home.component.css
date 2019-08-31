@@ -67,3 +67,6 @@
   top: 36%;
   right: -2.5rem;
 }
+.containerWidth {
+  max-width: 100%;
+}

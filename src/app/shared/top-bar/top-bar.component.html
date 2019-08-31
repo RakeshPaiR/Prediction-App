@@ -50,14 +50,14 @@
           <span class="ml-auto">{{maxPts}}</span>
         </div>
       </li>
-      <li class="nav-item mr-2 handCursor">
-        <div ngbDropdown class="container dropdown show d-inline-block" placement="bottom-left">
-            <a ngbDropdownToggle class="dropdown-toggle" id="UserDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <li class="nav-item mr-2">
+        <div ngbDropdown class="container">
+            <a ngbDropdownToggle class="handCursor" id="UserDropDown" aria-haspopup="true" aria-expanded="false" style="user-select: none">
                 <img src="{{userImageSrc}}" width="30" height="30" class="userImage">
                 <span class="fontSize20 fontWeight600 d-inline-block">&nbsp;&nbsp;{{userFirstName}}</span>
                 <span class="sr-only"></span>
             </a>
-            <div ngbDropdownMenu class="dropdown-menu dropdown-menu-left" aria-labelledby="UserDropDown">
+            <div aria-labelledby="UserDropDown" class="dropdownMenu" ngbDropdownMenu>
               <div class="container">
                 <div class="row">
                   <div class="col-4">

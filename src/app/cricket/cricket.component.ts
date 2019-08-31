@@ -22,7 +22,7 @@ export class CricketComponent implements OnInit {
       awayTieScore: '',
       winMethod: 'MI beat CSK by 1 run',
       winner: 'home',
-      dateString: '13/08/2019',
+      dateString: '2019/08/13',
       date: new Date()
     },
     {
@@ -37,7 +37,7 @@ export class CricketComponent implements OnInit {
       awayTieScore: '',
       winMethod: 'AUS beat ENG by 9 wickets(18 overs left) ',
       winner: 'home',
-      dateString: '14/08/2019',
+      dateString: '2019/08/14',
       date: new Date()
     },
     {
@@ -52,7 +52,7 @@ export class CricketComponent implements OnInit {
       awayTieScore: '',
       winMethod: 'SL beat BAN by 4 wickets (15 balls left)',
       winner: 'away',
-      dateString: '14/08/2019',
+      dateString: '2019/08/14',
       date: new Date()
     },
     {
@@ -67,7 +67,7 @@ export class CricketComponent implements OnInit {
       awayTieScore: '',
       winMethod: 'IND beat WI by 59 runs(DLS method)',
       winner: 'away',
-      dateString: '15/08/2019',
+      dateString: '2019/08/14',
       date: new Date()
     },
     {
@@ -82,7 +82,7 @@ export class CricketComponent implements OnInit {
       awayTieScore: '',
       winMethod: 'NZ beat PAK by 6 wickets (17.5 overs left)',
       winner: 'away',
-      dateString: '13/08/2019',
+      dateString: '2019/08/13',
       date: new Date()
     },
   ];

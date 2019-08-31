@@ -2,9 +2,10 @@
   <div class="row fontSize18 fontWeight600 m-0">
     <span class="mx-auto mt-1 mb-2">Past Matches</span>
   </div>
+  <hr class="specialHR">
   <div class="cardsSection">
     <div class="row w-100 m-0" *ngFor="let match of filterMatches(sportsType)">
-      <div class="card m-2 ml-3 w-100 bg-dark text-white">
+      <div class="card m-2 ml-3 w-100 bg-dark text-white" (click)="filterDates()">
         <div class="card-header">
           {{match.league}}
         </div>

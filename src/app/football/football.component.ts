@@ -20,7 +20,7 @@ export class FootballComponent implements OnInit {
       awayTieScore: '',
       winMethod: 'ManU and Chelsea draw without scoring any goal',
       winner: 'draw',
-      dateString: '13/08/2019',
+      dateString: '2019/08/13',
       date: Date
     },
     {
@@ -35,7 +35,7 @@ export class FootballComponent implements OnInit {
       awayTieScore: '4',
       winMethod: 'Brazil beat Argentina in Penalties (5-4) after a 4 goals tie',
       winner: 'home',
-      dateString: '14/08/2019',
+      dateString: '2019/08/14',
       date: Date
     },
     {
@@ -50,7 +50,7 @@ export class FootballComponent implements OnInit {
       awayTieScore: '',
       winMethod: 'FCB beat RMA with the score (3-1)',
       winner: 'away',
-      dateString: '15/08/2019',
+      dateString: '2019/08/15',
       date: Date
     },
     {
@@ -65,7 +65,7 @@ export class FootballComponent implements OnInit {
       awayTieScore: '',
       winMethod: 'MCFC beat LIV with a score (5-3)',
       winner: 'away',
-      dateString: '14/08/2019',
+      dateString: '2019/08/14',
       date: Date
     },
     {
@@ -80,7 +80,7 @@ export class FootballComponent implements OnInit {
       awayTieScore: '',
       winMethod: 'TOT beat ARS with a score (1-0)',
       winner: 'home',
-      dateString: '13/08/2019',
+      dateString: '2019/08/13',
       date: Date
     }
   ];

@@ -32,12 +32,16 @@
   top: 12px;
 }
 .topBar {
-  width: 100vw;
-  overflow-x: visible;
+  width: 100%;
+  clear: both;
 }
 .linkClass {
   color: #007bff !important;
 }
 .predictionLogo {
   width: 6rem;
+}
+.dropdownMenu {
+  left: auto;
+  right: 0;
 }
